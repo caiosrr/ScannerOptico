@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import re
+import math
 
 # Path to the CSV file
 file_path = r"C:\Users\caiod\OneDrive\Documentos\Projetos Python\IC\Imagens Finais\GEM CERN\Imagens"
@@ -44,7 +45,7 @@ for i, name in enumerate(image_names):
 # Define grid dimensions
 dim = 100
 step = 2.359
-dim_step = np.math.ceil(dim / step)
+dim_step = math.ceil(dim / step)
 
 # Create matrices to store the radii and circularities values (heatmaps)
 heatmap_radii = np.full((dim_step, dim_step), np.nan)  # Initialize with NaN
