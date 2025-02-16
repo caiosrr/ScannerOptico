@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import re
+import math
 
 # Caminho do arquivo CSV
 file_path = r"C:\Users\caiod\OneDrive\Documentos\Projetos Python\IC\Imagens Finais\GEM CERN\Imagens"
@@ -44,7 +45,7 @@ for i, name in enumerate(image_names):
 # Definir dimensões do grid
 dim = 100
 passo = 2.359
-dim_passo = np.math.ceil(dim / passo)
+dim_passo = math.ceil(dim / passo)
 
 # Criar matrizes para armazenar os valores dos raios e circularidades (mapas de calor)
 heatmap_raios = np.full((dim_passo, dim_passo), np.nan)  # Inicializar com NaN
